@@ -42,6 +42,8 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
   --color-menu-background: var(--color-menu-background);
+  --color-active: var(--color-active);
+  --color-active-background: var(--color-active-background);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -83,6 +85,8 @@
   --sidebar-accent-foreground: oklch(0.205 0 0);
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
+  --color-active: oklch(0.68 0.2086 21.1);
+  --color-active-background: oklch(0.68 0.2086 21.1 / 20%);
 }
 
 .dark {
@@ -120,6 +124,8 @@
   --color-menu-background: oklch(0.24 0.0038 286.12);
   --color-menu-icon: invert(85%) sepia(0%) saturate(300%) hue-rotate(167deg)
     brightness(89%) contrast(77%);
+  --color-active-menu-icon: invert(48%) sepia(49%) saturate(4161%)
+    hue-rotate(326deg) brightness(103%) contrast(107%);
 }
 
 @layer base {
@@ -133,4 +139,8 @@
 
 .menu-icon {
   filter: var(--color-menu-icon);
+}
+
+.active-menu-icon {
+  filter: var(--color-active-menu-icon);
 }
